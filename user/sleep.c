@@ -19,7 +19,7 @@ int main(int argc,char*argv[]){
         printf("Error argument,please again!");
         exit(-1);
     }
-    sleep(num)
+    sleep(num);
     exit(0);
 }
 
