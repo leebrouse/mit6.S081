@@ -3,6 +3,8 @@ struct rtcdate;
 
 // system calls
 int fork(void);
+//1.exit(0)至console input;
+//2.exit(1)至console output;
 int exit(int) __attribute__((noreturn));
 int wait(int*);
 int pipe(int*);
