@@ -60,6 +60,7 @@
     "stat.h": "c",
     "types.h": "c",
     "fs.h": "c",
-    "user.h": "c"
+    "user.h": "c",
+    "param.h": "c"
   }
 }
