@@ -79,11 +79,13 @@ void find(char *path, char *fileName)
                 continue;
             }
 
+            //执行递归的条件
             if (st.type == T_DIR)
             {
                 find(buf, fileName);
             }
 
+            //递归出口
             if (strcmp(p, fileName) == 0)
             {
                 printf("%s\n", buf);
@@ -98,7 +100,7 @@ int main(int argc, char *argv[])
 {
     if (argc != 3)
     {
-        fprintf(2, "Error,Example:find . b");
+        fprintf(2, "Error,Example:find <directory> <fileName>\n");
         exit(-1);
     }
     find(argv[1], argv[2]);
