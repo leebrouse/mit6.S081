@@ -4,8 +4,14 @@
 #include "user/user.h"
 
 #define MSGSIZE 36
-#define ONE '1'
-#define ZERO '0'
+// #define ONE '1'
+// #define  ZERO '0'
+
+enum sta
+{
+    ONE = '1',
+    ZERO = '0'
+};
 
 void prime(int pipe_read, int pipe_write)
 {
@@ -21,17 +27,17 @@ void prime(int pipe_read, int pipe_write)
         }
     }
 
-    if (val==0)
+    if (val == 0)
     {
         exit(0);
     }
-    
+
     printf("prime %d\n", val);
     buf[val] = ZERO;
 
     for (int i = 0; i < MSGSIZE; i++)
     {
-        if (i % val==0)
+        if (i % val == 0)
         {
             buf[i] = ZERO;
         }
